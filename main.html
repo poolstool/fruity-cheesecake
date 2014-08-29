@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"></meta>
+<title>
+    HCI Nmap Prototype
+</title>
+<meta name="description" content="Content of page."></meta>
 <link rel="stylesheet" href="style1.css" type="text/css"></link>
 </head>
 <body>
@@ -14,10 +19,44 @@
             Topology
             </div>
         </div>
+        <div class="result-table-area" id="host-list-area">
+            <table class="result-table" id="host-selection">
+                <tr><td></td><td>Name</td><td>IP</td></tr>
+                <tr><td></td><td></td><td>192.168.1.1</td></tr>
+                <tr><td></td><td></td><td>192.168.1.2</td></tr>
+                <tr><td></td><td></td><td>192.168.1.4</td></tr>
+                <tr><td></td><td></td><td>192.168.1.16</td></tr>
+                <tr><td></td><td></td><td>192.168.1.32</td></tr>
+                <tr><td></td><td>scanme.nmap.org</td><td>74.207.244.221</td></tr>
+            </table>
+        </div>
     </div>
     <div class="result-section" id="filter-port-section">
+        <div class="result-table-area" id="port-list-area">
+            <table class="result-table" id="port-selection">
+                <tr><td>Port</td><td>Service</td></tr>
+                <tr><td>22</td><td>ssh</td></tr>
+                <tr><td>23</td><td>telnet</td></tr>
+                <tr><td>80</td><td>http</td></tr>
+                <tr><td>111</td><td>rpcbind</td></tr>
+                <tr><td>2049</td><td>nfs</td></tr>
+            </table>
+        </div>
     </div>
     <div class="result-section" id="result-port-section">
+        <div class="result-table-area" id="scan-result-list-area">
+            <table class="result-table" id="scan-result-selection">
+                <tr><td>Host</td><td>Port</td><td>Protocol</td><td>State</td><td>Service</td><td>Version</td></tr>
+                <tr><td>scanme.nmap.org (74.207.244.221)</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 5.3p1 Debian 3buntu7.1 (Ubuntu Linux; protocol 2.0)</td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Apache httpd 2.2.14 ((Ubuntu))</td></tr>
+                <tr><td>192.168.1.1</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 0.46 (protocol 2.0)</td></tr>
+                <tr><td></td><td>23</td><td>tcp</td><td>open</td><td>telnet</td><td>Broadcom BCM96328 ADSL router telnetd</td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>micro_httpd</td></tr>
+                <tr><td>192.168.1.2</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 2013.60 (protocol 2.0)</td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Linksys wireless-G WAP http config (Name RT-N56u)</td></tr>
+                <tr><td>192.168.1.4</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 6.6p1-hpn14v4 (protocol 2.0)</td></tr>
+            </table>
+        </div>
     </div>
     <div class="result-section" id="result-details-section">
     </div>
