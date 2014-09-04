@@ -12,13 +12,16 @@
 <div id="main">
     <div class="result-section" id="filter-host-section">
         <div class="button-section" id="filter-host-buttons">
-            <div class="button-thing" id="host-by-list-button">
+            <ul class="button-ul" id="filter-host-ul">
+            <a class="tab-choice" id="host-by-list-button" href="main.html">
             List
-            </div>
-            <div class="button-thing" id="host-by-topology-button">
+            </a>
+            <a class="tab-choice" id="host-by-topology-button" href="main.html">
             Topology
-            </div>
+            </a>
+            </ul>
         </div>
+        <div class="tab-choice-result" id="host-by-result">
         <div class="result-table-area" id="host-list-area">
             <table class="result-table" id="host-selection">
                 <tr><td></td><td>Name</td><td>IP</td></tr>
@@ -29,6 +32,7 @@
                 <tr><td></td><td></td><td>192.168.1.32</td></tr>
                 <tr><td></td><td>scanme.nmap.org</td><td>74.207.244.221</td></tr>
             </table>
+        </div>
         </div>
     </div>
     <div class="result-section" id="filter-port-section">
