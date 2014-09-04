@@ -1,4 +1,5 @@
 /* most things */
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -8,74 +9,76 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	vertical-align: baseline;
 }
 
-html {
-	line-height: 1;
-}
-
-/* ordered list, unordered list */
-ol, ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* table header, table data cell */
-th, td {
-	text-align: left;
-	font-weight: normal;
-	vertical-align: middle;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
-	display: block
-}
-
-/* image hyperlinks */
-a img{
-	border: none
-}
-
-/* circles yay! */
-.circle {
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%
-}
-
-/* normal hyperlinks */
-a {
-    font-family: inherit;
-    text-decoration: none;
-    color: #2F82C2; /* sky blue */
-}
-
-body {
-    color: #333;
-    padding-left: 0.25em;
-}
-
-.button-ul {
-    display: inline-block;
-    padding: 0px 0px 1px;
-}
-
-.tab-choice-t {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    background: #cccccc;
-    color: #000;
-    padding: 4px;
-    text-decoration: none;
-}
-
-.tab-choice-t:hover {
-    background: #eeeeee;
-}
 
 .result-section {
     float: left;
 }
+
+.result-head-spacer {
+    height: 38px;
+}
+
+.result-line-spacer {
+    border-left: 1px solid #e0e0e0;
+    margin: 0px 0.5em;
+    margin-top: 40px;
+    height: 200px;
+    position: relative;
+    float: left;
+}
+
+
+.button-section {
+    white-space: nowrap;
+    padding-left: 0.25em;
+}
+
+.button-select-ul {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.button-select-a {
+    padding: 0.5em;
+    line-height: 38px;
+}
+
+/* tables */
+/* every second line of table color */
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th {
+    background-image: url('a-down.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+th, td {
+    padding-bottom: 2px;
+    padding-right: 3px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th:hover {
+    background-color: skyblue;
+}
+
+.result-table {
+    border-collapse: collapse;
+}
+
+/* for development */
+.dev {
+    font-size: 0.6em;
+    color: #f79;
+}
+/*
+div {
+    border: 1px solid #ddd;
+}
+*/

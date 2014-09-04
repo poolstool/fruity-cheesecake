@@ -10,21 +10,24 @@
 </head>
 <body>
 <div id="main">
-    <div class="result-section" id="filter-host-section">
-        <div class="button-section" id="filter-host-buttons">
-            <ul class="button-ul" id="filter-host-ul">
-            <a class="tab-choice" id="host-by-list-button" href="main.html">
-            List
-            </a>
-            <a class="tab-choice" id="host-by-topology-button" href="main.html">
-            Topology
-            </a>
+<div id="scan-or-result">
+    <div class="result-section">
+        <div class="result-head-spacer"><div class="button-section">
+            <ul class="button-select-ul" id="filter-host-ul">
+                <li class="button-select-ul">
+                <a class="button-select-a" id="host-by-list-button" href="main.html">
+                List
+                </a></li>
+                <li class="button-select-ul">
+                <a class="button-select-a" id="host-by-topology-button" href="main.html">
+                Topology
+                </a></li>
             </ul>
-        </div>
+        </div></div>
         <div class="tab-choice-result" id="host-by-result">
         <div class="result-table-area" id="host-list-area">
             <table class="result-table" id="host-selection">
-                <tr><td></td><td>Name</td><td>IP</td></tr>
+                <tr><th></th><th>Name</th><th>IP</th></tr>
                 <tr><td></td><td></td><td>192.168.1.1</td></tr>
                 <tr><td></td><td></td><td>192.168.1.2</td></tr>
                 <tr><td></td><td></td><td>192.168.1.4</td></tr>
@@ -35,10 +38,12 @@
         </div>
         </div>
     </div>
-    <div class="result-section" id="filter-port-section">
+    <div class="result-line-spacer"></div>
+    <div class="result-section">
+        <div class="result-head-spacer"></div>
         <div class="result-table-area" id="port-list-area">
             <table class="result-table" id="port-selection">
-                <tr><td>Port</td><td>Service</td></tr>
+                <tr><th>Port</th><th>Service</th></tr>
                 <tr><td>22</td><td>ssh</td></tr>
                 <tr><td>23</td><td>telnet</td></tr>
                 <tr><td>80</td><td>http</td></tr>
@@ -47,10 +52,12 @@
             </table>
         </div>
     </div>
+    <div class="result-line-spacer"></div>
     <div class="result-section" id="result-port-section">
+        <div class="result-head-spacer"></div>
         <div class="result-table-area" id="scan-result-list-area">
             <table class="result-table" id="scan-result-selection">
-                <tr><td>Host</td><td>Port</td><td>Protocol</td><td>State</td><td>Service</td><td>Version</td></tr>
+                <tr><th>Host</th><th>Port</th><th>Protocol</th><th>State</th><th>Service</th><th>Version</th></tr>
                 <tr><td>scanme.nmap.org (74.207.244.221)</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 5.3p1 Debian 3buntu7.1 (Ubuntu Linux; protocol 2.0)</td></tr>
                 <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Apache httpd 2.2.14 ((Ubuntu))</td></tr>
                 <tr><td>192.168.1.1</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 0.46 (protocol 2.0)</td></tr>
@@ -62,8 +69,11 @@
             </table>
         </div>
     </div>
+    <div class="result-line-spacer"></div>
     <div class="result-section" id="result-details-section">
+        <div class="result-head-spacer"></div>
     </div>
+</div>
 </div>
 </body>
 </html>
