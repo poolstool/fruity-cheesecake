@@ -46,7 +46,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 /* tables */
 /* every second line of table color */
 tr:nth-child(even) {
-    background-color: #eee;
+    background-color: #f8f8f8;
 }
 
 th {
@@ -72,6 +72,28 @@ th:hover {
     border-collapse: collapse;
 }
 
+.progress-bar > .pb-bar {
+    background-color: orange;
+    width: 40%;
+    height: 3px;
+}
+
+.big-button {
+    /* x x b x */
+    margin: 4px 4px 4px 0px;
+    width: 40px;
+    height: 26px;
+}
+
+.big-button-link { 
+    padding: 0.5em;
+    line-height: 38px;
+} 
+
+#new-scan-button {
+    background-color: gold;
+}
+
 /* for development */
 .dev {
     font-size: 0.6em;
@@ -81,4 +103,5 @@ th:hover {
 div {
     border: 1px solid #ddd;
 }
+
 */
