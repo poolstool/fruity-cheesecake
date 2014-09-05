@@ -50,7 +50,7 @@ tr:nth-child(even) {
 }
 
 th {
-    background-image: url('tick-green-s.png');
+    background-image: url('a-down-s.png');
     background-repeat: no-repeat;
     background-position: right;
 }
