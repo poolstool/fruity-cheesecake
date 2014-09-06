@@ -49,8 +49,8 @@ tr:nth-child(even) {
     background-color: #f8f8f8;
 }
 
-th {
-    background-image: url('a-down-s.png');
+th.sort {
+    background-image: url('img/a-down-16.png');
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -64,8 +64,12 @@ th, td {
     white-space: nowrap;
 }
 
-th:hover {
-    background-color: skyblue;
+th {
+    background-color: #ddd;
+}
+
+th.sort:hover {
+    background-color: #ccaaff;
 }
 
 .result-table {
@@ -79,10 +83,23 @@ th:hover {
 }
 
 .big-button {
-    /* x x b x */
     margin: 4px 4px 4px 0px;
-    width: 40px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
+}
+
+.big-nav-ul {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.host-details {
+    list-style: none outside none;
+    padding-left: 1.4em;
+}
+
+.host-details-table {
+    margin-left: 1.4em;
 }
 
 .big-button-link { 
@@ -90,8 +107,12 @@ th:hover {
     line-height: 38px;
 } 
 
-#new-scan-button {
-    background-color: gold;
+#go-scan-button {
+    background-image: url('img/play-green-32.png');
+}
+
+#go-scan-button .scanning {
+    background-image: url('img/play-green-32.png');
 }
 
 /* for development */
