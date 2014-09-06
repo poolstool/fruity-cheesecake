@@ -21,7 +21,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .result-line-spacer {
     border-left: 1px solid #e0e0e0;
     margin: 0px 0.5em;
-    margin-top: 40px;
+    margin-top: 4px;
     height: 200px;
     position: relative;
     float: left;
@@ -36,6 +36,14 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .button-select-ul {
     list-style: none outside none;
     display: inline-block;
+}
+
+.button-spacer-ul {
+    list-style: none outside none;
+    display: inline-block;
+    border-left: 1px solid #e0e0e0;
+    height: 16px;
+    position: relative;
 }
 
 .button-select-a {

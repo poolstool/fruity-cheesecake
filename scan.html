@@ -11,26 +11,28 @@
 <body>
 <div id="main">
 <div class="progress-bar" id="scan-progress">
-    <div class="pb-bar">
+    <div class="pb-bar" title="Scan progress (40%)">
+</div>
+<div class="button-section">
+    <ul class="button-select-ul" id="filter-host-ul">
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-list-button" href="main.html">
+        &lt; Scan
+        </a></li>
+        <li class="button-spacer-ul">
+        </li>
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-list-button" href="main.html">
+        List
+        </a></li>
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-topology-button" href="main.html">
+        Topology
+        </a></li>
+    </ul>
 </div>
 <div id="scan-or-result">
     <div class="result-section">
-        <div class="result-head-spacer"><div class="button-section">
-            <ul class="button-select-ul" id="filter-host-ul">
-                <li class="button-select-ul">
-                <a class="button-select-a" id="host-by-list-button" href="main.html">
-                &lt; Scan
-                </a></li>
-                <li class="button-select-ul">
-                <a class="button-select-a" id="host-by-list-button" href="main.html">
-                List
-                </a></li>
-                <li class="button-select-ul">
-                <a class="button-select-a" id="host-by-topology-button" href="main.html">
-                Topology
-                </a></li>
-            </ul>
-        </div></div>
         <div class="tab-choice-result" id="host-by-result">
         <div class="result-table-area" id="host-list-area">
             <table class="result-table" id="host-selection">
@@ -41,14 +43,13 @@
                 <tr><td></td><td>192.168.1.4</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td></td><td>192.168.1.16</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td></td><td>192.168.1.32</td><td><input type="checkbox" class="filter-chk" /></td></tr>
-                <tr><td>scanme.nmap.org</td><td>74.207.244.221</td></tr>
+                <tr><td>scanme.nmap.org</td><td>74.207.244.221</td><td><input type="checkbox" class="filter-chk" /></td></tr>
             </table>
         </div>
         </div>
     </div>
     <div class="result-line-spacer"></div>
     <div class="result-section">
-        <div class="result-head-spacer"></div>
         <div class="result-table-area" id="port-list-area">
             <table class="result-table" id="port-selection">
                 <tr><th class="sort">Port</th><th class="sort">Service</th><th></th></tr>
@@ -62,7 +63,6 @@
     </div>
     <div class="result-line-spacer"></div>
     <div class="result-section" id="result-port-section">
-        <div class="result-head-spacer"></div>
         <div class="result-table-area" id="scan-result-list-area">
             <table class="result-table" id="scan-result-selection">
                 <tr><th class="sort">Host</th><th class="sort">Port</th><th class="sort">Protocol</th><th class="sort">State</th><th class="sort">Service</th><th class="sort">Version</th></tr>
@@ -79,7 +79,6 @@
     </div>
     <div class="result-line-spacer"></div>
     <div class="result-section" id="result-details-section">
-        <div class="result-head-spacer"></div>
         <ul class="d-hosts host-details">
             <li>scanme.nmap.org
                 <ul class="d-sections host-details">

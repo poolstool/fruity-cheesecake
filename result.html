@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>
+    HCI Nmap Prototype
+</title>
+<meta name="description" content="Content of page."></meta>
+<link rel="stylesheet" href="style1.css" type="text/css"></link>
+</head>
+<body>
+<div id="main">
+<div class="progress-bar" id="scan-progress">
+    <div class="pb-bar" title="Scan progress (40%)">
+</div>
+<div class="button-section">
+    <ul class="button-select-ul" id="filter-host-ul">
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-list-button" href="result.html">
+        &lt; Scan
+        </a></li>
+        <li class="button-spacer-ul">
+        </li>
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-list-button" href="result.html">
+        List
+        </a></li>
+        <li class="button-select-ul">
+        <a class="button-select-a" id="host-by-topology-button" href="result.html">
+        Topology
+        </a></li>
+    </ul>
+</div>
+<div id="scan-or-result">
+    <div class="result-section">
+        <div class="tab-choice-result" id="host-by-result">
+        <div class="result-table-area" id="host-list-area">
+            <table class="result-table" id="host-selection">
+                <tr><th class="sort">Name</th><th class="sort">IP</th><th></th></tr>
+                <tr><td></td><td>192.168.1.1</td>
+                    <td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>192.168.1.2</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>192.168.1.4</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>192.168.1.16</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>192.168.1.32</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>scanme.nmap.org</td><td>74.207.244.221</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="result-line-spacer"></div>
+    <div class="result-section">
+        <div class="result-table-area" id="port-list-area">
+            <table class="result-table" id="port-selection">
+                <tr><th class="sort">Port</th><th class="sort">Service</th><th></th></tr>
+                <tr><td>22</td><td>ssh</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>23</td><td>telnet</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>80</td><td>http</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>111</td><td>rpcbind</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>2049</td><td>nfs</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="result-line-spacer"></div>
+    <div class="result-section" id="result-port-section">
+        <div class="result-table-area" id="scan-result-list-area">
+            <table class="result-table" id="scan-result-selection">
+                <tr><th class="sort">Host</th><th class="sort">Port</th><th class="sort">Protocol</th><th class="sort">State</th><th class="sort">Service</th><th class="sort">Version</th><th></th></tr>
+                <tr><td>scanme.nmap.org (74.207.244.221)</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 5.3p1 Debian 3buntu7.1 (Ubuntu Linux; protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Apache httpd 2.2.14 ((Ubuntu))</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>192.168.1.1</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 0.46 (protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>23</td><td>tcp</td><td>open</td><td>telnet</td><td>Broadcom BCM96328 ADSL router telnetd</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>micro_httpd</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>192.168.1.2</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 2013.60 (protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Linksys wireless-G WAP http config (Name RT-N56u)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+                <tr><td>192.168.1.4</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 6.6p1-hpn14v4 (protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="result-line-spacer"></div>
+    <div class="result-section" id="result-details-section">
+        <ul class="d-hosts host-details">
+            <li>scanme.nmap.org
+                <ul class="d-sections host-details">
+                    <li>Host Status
+                    <table class="host-details-table">
+                    <tr><td>State</td><td>up</td></tr>
+                    <tr><td>Open</td><td>2</td></tr>
+                    <tr><td>Filtered</td><td>0</td></tr>
+                    <tr><td>Closed</td><td>0</td></tr>
+                    <tr><td>Scanned</td><td>2</td></tr>
+                    <tr><td>Uptime</td><td>Not Available</td></tr>
+                    <tr><td>Last Boot</td><td>Not Available</td></tr>
+                    </table>
+                    </li>
+                    <li>Addresses
+                    <table class="host-details-table">
+                    <tr><td>IPv4</td><td>74.207.244.221</td></tr>
+                    <tr><td>IPv6</td><td>Not Available</td></tr>
+                    <tr><td>MAC</td><td>Not Available</td></tr>
+                    </table>
+                    </li>
+                    <li>Hostnames
+                    <table class="host-details-table">
+                    <tr><td></td><td></td></tr>
+                    </table>
+                    </li>
+                    <li>Operating System
+                    <table class="host-details-table">
+                    <tr><td></td><td></td></tr>
+                    </table>
+                    <ul class="d-os host-details">
+                        <li>Ports Used
+                        <table class="host-details-table">
+                        <tr><td></td><td></td></tr>
+                        </table>
+                        </li>
+                        <li>OS Classes
+                        <table>
+                        <tr><td></td><td></td></tr>
+                        </table>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>TCP Sequence
+                    </li>
+                    <li>IP ID Sequence
+                    </li>
+                    <li>TCP TS Sequence
+                    </li>
+                    <li>Comments
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</body>
+</html>
