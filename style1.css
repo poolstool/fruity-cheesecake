@@ -51,6 +51,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     line-height: 38px;
 }
 
+.button-select-selected, .button-select-a:hover {
+    background-color: #44dd22;
+    padding-bottom: 1em;
+}
+
 /* tables */
 /* every second line of table color */
 tr:nth-child(even) {
@@ -61,6 +66,15 @@ th.sort {
     background-image: url('img/a-down-16.png');
     background-repeat: no-repeat;
     background-position: right;
+}
+
+.list-or-topol {
+    display: table;
+    float: left;
+}
+.list-top-ind {
+    background-color: #44dd22;
+    height: 3px;
 }
 
 th, td {

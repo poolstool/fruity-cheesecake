@@ -11,7 +11,7 @@
 <body>
 <div id="main">
 <div class="progress-bar" id="scan-progress">
-    <div class="pb-bar" title="Scan progress (40%)">
+    <div class="pb-bar" title="Scan progress (40%)"></div>
 </div>
 <div class="button-section">
     <ul class="button-select-ul" id="filter-host-ul">
@@ -22,7 +22,7 @@
         <li class="button-spacer-ul">
         </li>
         <li class="button-select-ul">
-        <a class="button-select-a" id="host-by-list-button" href="result.html">
+        <a class="button-select-a button-select-selected" id="host-by-list-button" href="result.html">
         List
         </a></li>
         <li class="button-select-ul">
@@ -32,11 +32,13 @@
     </ul>
 </div>
 <div id="scan-or-result">
+  <div class="list-or-topol">
+    <div class="list-top-ind"></div>
     <div class="result-section">
-        <div class="tab-choice-result" id="host-by-result">
+      <div class="tab-choice-result" id="host-by-result">
         <div class="result-table-area" id="host-list-area">
             <table class="result-table" id="host-selection">
-                <tr><th class="sort">Name</th><th class="sort">IP</th><th></th></tr>
+                <tr><th class="sort">Name</th><th class="sort">IP</th><th><input type="checkbox" class="filter-chk" /></th></tr>
                 <tr><td></td><td>192.168.1.1</td>
                     <td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td></td><td>192.168.1.2</td><td><input type="checkbox" class="filter-chk" /></td></tr>
@@ -46,13 +48,13 @@
                 <tr><td>scanme.nmap.org</td><td>74.207.244.221</td><td><input type="checkbox" class="filter-chk" /></td></tr>
             </table>
         </div>
-        </div>
+      </div>
     </div>
     <div class="result-line-spacer"></div>
     <div class="result-section">
         <div class="result-table-area" id="port-list-area">
             <table class="result-table" id="port-selection">
-                <tr><th class="sort">Port</th><th class="sort">Service</th><th></th></tr>
+                <tr><th class="sort">Port</th><th class="sort">Service</th><th><input type="checkbox" class="filter-chk" /></th></tr>
                 <tr><td>22</td><td>ssh</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td>23</td><td>telnet</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td>80</td><td>http</td><td><input type="checkbox" class="filter-chk" /></td></tr>
@@ -61,11 +63,12 @@
             </table>
         </div>
     </div>
+  </div>
     <div class="result-line-spacer"></div>
     <div class="result-section" id="result-port-section">
         <div class="result-table-area" id="scan-result-list-area">
             <table class="result-table" id="scan-result-selection">
-                <tr><th class="sort">Host</th><th class="sort">Port</th><th class="sort">Protocol</th><th class="sort">State</th><th class="sort">Service</th><th class="sort">Version</th><th></th></tr>
+                <tr><th class="sort">Host</th><th class="sort">Port</th><th class="sort">Protocol</th><th class="sort">State</th><th class="sort">Service</th><th class="sort">Version</th><th><input type="checkbox" class="filter-chk" /></th></tr>
                 <tr><td>scanme.nmap.org (74.207.244.221)</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>OpenSSH 5.3p1 Debian 3buntu7.1 (Ubuntu Linux; protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td></td><td>80</td><td>tcp</td><td>open</td><td>http</td><td>Apache httpd 2.2.14 ((Ubuntu))</td><td><input type="checkbox" class="filter-chk" /></td></tr>
                 <tr><td>192.168.1.1</td><td>22</td><td>tcp</td><td>open</td><td>ssh</td><td>Dropbear sshd 0.46 (protocol 2.0)</td><td><input type="checkbox" class="filter-chk" /></td></tr>
