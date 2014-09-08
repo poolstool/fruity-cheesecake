@@ -137,14 +137,16 @@ th.sort:hover {
     background-image: url('img/play-green-32.png');
 }
 
-/* for development */
-.dev {
-    font-size: 0.6em;
-    color: #f79;
-}
-/*
-div {
-    border: 1px solid #ddd;
+#pretend-window {
+    background: #fff;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    display: table;
 }
 
-*/
+body {
+    background-color: green;
+    background-image: url('img/bliss.jpg');
+}
