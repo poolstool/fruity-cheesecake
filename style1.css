@@ -9,6 +9,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	vertical-align: baseline;
 }
 
+ul {
+    list-style: none outside none;
+}
+
 
 .result-section {
     float: left;
@@ -34,12 +38,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 }
 
 .button-select-ul {
-    list-style: none outside none;
     display: inline-block;
 }
 
 .button-spacer-ul {
-    list-style: none outside none;
     display: inline-block;
     border-left: 1px solid #e0e0e0;
     height: 16px;
@@ -66,6 +68,10 @@ th.sort {
     background-image: url('img/a-down-16.png');
     background-repeat: no-repeat;
     background-position: right;
+}
+
+tr:hover {
+    background-color: #ddd;
 }
 
 .list-or-topol {
@@ -111,12 +117,10 @@ th.sort:hover {
 }
 
 .big-nav-ul {
-    list-style: none outside none;
     display: inline-block;
 }
 
 .host-details {
-    list-style: none outside none;
     padding-left: 1.4em;
 }
 
@@ -139,14 +143,35 @@ th.sort:hover {
 
 #pretend-window {
     background: #fff;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4em;
     display: table;
 }
 
+#menu-bar {
+    height: 15px;
+    padding-bottom: 6px;
+}
+
+.window-stuff {
+    float: right;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#exit-window {
+    background-color: #f44;
+}
+
+.window-stuff:hover, #exit-window:hover {
+    background-color: #ddd;
+}
+
 body {
-    background-color: green;
+    background-color: #55bbff;
     background-image: url('img/bliss.jpg');
 }

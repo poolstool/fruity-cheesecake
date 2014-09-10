@@ -11,6 +11,11 @@
 <body>
 <div id="main">
 <div id="pretend-window">
+<div id="menu-bar">
+    <div class="window-stuff" id="exit-window">X</div>
+    <div class="window-stuff" id="restore-window">+</div>
+    <div class="window-stuff" id="min-window">_</div>
+</div>
 <div class="progress-bar" id="scan-progress">
     <div class="pb-bar" title="Scan progress (40%)">
 </div>
@@ -18,7 +23,7 @@
     <ul class="button-select-ul" id="filter-host-ul">
         <li class="button-select-ul">
         <a class="button-select-a" id="host-by-list-button" href="main.html">
-        &lt; Scan
+        Scan
         </a></li>
         <li class="button-spacer-ul">
         </li>
@@ -38,9 +43,7 @@
     </div>
     <ul class="scan-options-s" id="scan-types">
         <li><input type="radio" name="st">TCP Connect</input></li>
-        <li class="req-root"><input type="radio" name="st">SYN</input></li>
-        <li class="req-root"><input type="radio" name="st">UDP</input></li>
-        <li class="req-root"><input type="radio" name="st">SCTP INIT</input></li>
+        <li class="req-root" title="(-sT) TCP connect scan&#013;&#013;TCP connect scan is the default TCP scan type when SYN scan is not an option. This is the case when a user does not have raw packet privileges. Instead of writing raw packets as most other scan types do, Nmap asks the underlying operating system to establish a connection with the target machine and port by issuing the connect system call. This is the same high-level system call that web browsers, P2P clients, and most other network-enabled applications use to establish a connection. It is part of a programming interface known as the Berkeley Sockets API. Rather than read raw packet responses off the wire, Nmap uses this API to obtain status information on each connection attempt.&#013;&#013;When SYN scan is available, it is usually a better choice.  Nmap has less control over the high level connect call than with raw packets, making it less efficient. The system call completes connections to open target ports rather than performing the half-open reset that SYN scan does. Not only does this take longer and require more packets to obtain the same information, but target machines are more likely to log the connection. A decent IDS will catch either, but most machines have no such alarm system. Many services on your average Unix system will add a note to syslog, and sometimes a cryptic error message, when Nmap connects and then closes the connection without sending data. Truly pathetic services crash when this happens, though that is uncommon. An administrator who sees a bunch of connection attempts in her logs from a single system should know that she has been connect scanned."><input type="radio" name="st">SYN</input></li>
         <li class="req-root"><input type="radio" name="st">NULL</input></li>
         <li class="req-root"><input type="radio" name="st">FIN</input></li>
         <li class="req-root"><input type="radio" name="st">Xmas</input></li>
@@ -48,6 +51,8 @@
         <li class="req-root"><input type="radio" name="st">Window</input></li>
         <li class="req-root"><input type="radio" name="st">Maimon</input></li>
         <li class="req-root"><input type="radio" name="st">Other</input><input type="text"></input></li>
+        <li class="req-root" title="(-sU) UDP scan&#013;&#013;While most popular services on the Internet run over the TCP protocol, UDP[6] services are widely deployed. DNS, SNMP, and DHCP (registered ports 53, 161/162, and 67/68) are three of the most common. Because UDP scanning is generally slower and more difficult than TCP, some security auditors ignore these ports. This is a mistake, as exploitable UDP services are quite common and attackers certainly don't ignore the whole protocol. Fortunately, Nmap can help inventory UDP ports.&#013;&#013;UDP scan is activated with the -sU option. It can be combined with a TCP scan type such as SYN scan (-sS) to check both protocols during the same run.&#013;&#013;UDP scan works by sending a UDP packet to every targeted port. For some common ports such as 53 and 161, a protocol-specific payload is sent, but for most ports the packet is empty..  The --data-length option can be used to send a fixed-length random payload to every port or (if you specify a value of 0) to disable payloads. If an ICMP port unreachable error (type 3, code 3) is returned, the port is closed. Other ICMP unreachable errors (type 3, codes 1, 2, 9, 10, or 13) mark the port as filtered. Occasionally, a service will respond with a UDP packet, proving that it is open. If no response is received after retransmissions, the port is classified as open|filtered. This means that the port could be open, or perhaps packet filters are blocking the communication. Version detection (-sV) can be used to help differentiate the truly open ports from the filtered ones."><input type="checkbox">UDP</input></li>
+        <li class="req-root"><input type="checkbox">SCTP INIT</input></li>
     </ul>
 </div>
 </div>
